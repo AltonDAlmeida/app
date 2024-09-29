@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Reservation Chatbot</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Hotel</h1>
+        <p>Book your stay with our chatbot or fill in the form below.</p>
+    </header>
+
+    <!-- Chatbot Messenger -->
+    <section class="chatbot">
+        <h2>Chat with Our Reservation Bot</h2>
+        <df-messenger
+            intent="WELCOME"
+            chat-title="Hotel Bot"
+            agent-id="YOUR_AGENT_ID"
+            language-code="en">
+        </df-messenger>
+    </section>
+
+    <!-- Hotel Reservation Form -->
+    <section class="reservation-form">
+        <h2>Manual Reservation Form</h2>
+        <form id="reservationForm">
+            <label for="roomType">Room Type:</label>
+            <select id="roomType" name="roomType" required>
+                <option value="single">Single</option>
+                <option value="double">Double</option>
+                <option value="suite">Suite</option>
+            </select>
+
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" min="1" max="5" required>
+
+            <label for="checkIn">Check-in Date:</label>
+            <input type="date" id="checkIn" name="checkIn" required>
+
+            <label for="checkOut">Check-out Date:</label>
+            <input type="date" id="checkOut" name="checkOut" required>
+
+            <button type="submit">Book Now</button>
+        </form>
+        <p id="formResponse"></p>
+    </section>
+
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <script src="static/js/app.js"></script>
+</body>
+</html>
