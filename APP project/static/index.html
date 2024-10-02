@@ -4,26 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel Reservation Chatbot</title>
-    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to Our Hotel</h1>
-        <p>Book your stay with our chatbot or fill in the form below.</p>
+        <h1>Online Booking Chatbot</h1>
     </header>
+    <hr>
 
-    <!-- Chatbot Messenger -->
-    <section class="chatbot">
-        <h2>Chat with Our Reservation Bot</h2>
+    <main>
+        <br><br>
+        <p><strong>Book your stay with our chatbot or fill in the form below.</strong>
+        </p>
+        <br>
+
+        
         <df-messenger
-            intent="WELCOME"
-            chat-title="Hotel Bot"
-            agent-id="YOUR_AGENT_ID"
-            language-code="en">
-        </df-messenger>
-    </section>
+        intent="WELCOME"
+        chat-title="Agent 001"
+        agent-id="newagent-bmu9"
+        language-code="en">
+    </df-messenger>
 
-    <!-- Hotel Reservation Form -->
+
     <section class="reservation-form">
         <h2>Manual Reservation Form</h2>
         <form id="reservationForm">
@@ -33,22 +36,29 @@
                 <option value="double">Double</option>
                 <option value="suite">Suite</option>
             </select>
-
+<br>
             <label for="guests">Number of Guests:</label>
-            <input type="number" id="guests" name="guests" min="1" max="5" required>
-
+            <input type="number" id="guests" name="guests" min="1" max="8" required>
+<br>
             <label for="checkIn">Check-in Date:</label>
             <input type="date" id="checkIn" name="checkIn" required>
-
+<br>
             <label for="checkOut">Check-out Date:</label>
             <input type="date" id="checkOut" name="checkOut" required>
-
+<br><br>
             <button type="submit">Book Now</button>
         </form>
         <p id="formResponse"></p>
     </section>
+    <footer>
+        
+        
+    </footer>
+    </main>
 
     <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-    <script src="static/js/app.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/bot.js" ></script>
 </body>
 </html>
+
